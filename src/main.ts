@@ -1,6 +1,10 @@
 import * as _ from "lodash";
 import Phaser = require('phaser');
 
+import { Level } from './scenes/level';
+
+/// <reference path="../phaser.d.ts"/>
+
 class Game {
     player;
 
@@ -105,11 +109,12 @@ let config = {
             debug: false
         }
     },
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
-    }
+    //scene: {
+    //    preload: preload,
+    //    create: create,
+    //    update: update
+    //}
+    scene: Level
 };
 
 let phaser = new Phaser.Game(config);
